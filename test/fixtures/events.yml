@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  company: 
+  discount_summary: MyText
+  description: MyText
+  start_date: 2013-05-08 22:39:11
+  end_date: 2013-05-08 22:39:11
+  total_number: 1
+  bought_number: 1
+  validated: false
+
+two:
+  name: MyString
+  company: 
+  discount_summary: MyText
+  description: MyText
+  start_date: 2013-05-08 22:39:11
+  end_date: 2013-05-08 22:39:11
+  total_number: 1
+  bought_number: 1
+  validated: false

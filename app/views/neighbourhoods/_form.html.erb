@@ -1,0 +1,6 @@
+<%= simple_form_for @neighbourhood do |f| %>
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.association :city %>
+  <%= f.button :submit %>
+<% end %>

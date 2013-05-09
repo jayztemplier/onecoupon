@@ -1,0 +1,25 @@
+<% title "Companies" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Neighbourhood</th>
+  </tr>
+  <% for company in @companies %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.email %></td>
+      <td><%= company.phone_number %></td>
+      <td><%= company.address %></td>
+      <td><%= company.city.name %></td>
+      <td><%= company.neighbourhood.name %></td>
+      <td><%= link_to "Edit", edit_company_path(company) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Company", new_company_path %></p>

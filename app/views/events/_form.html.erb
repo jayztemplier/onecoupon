@@ -1,0 +1,11 @@
+<%= simple_form_for @event do |f| %>
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.association :company %>
+  <%= f.input :discount_summary %>
+  <%= f.input :description %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :total_number %>
+  <%= f.button :submit %>
+<% end %>

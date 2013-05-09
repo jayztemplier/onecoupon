@@ -1,0 +1,17 @@
+<% title "Neighbourhoods" %>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Name</th>
+  </tr>
+  <% for neighbourhood in @neighbourhoods %>
+    <tr>
+      <td><%= neighbourhood.city.name %></td>
+      <td><%= neighbourhood.name %></td>
+      <td><%= link_to "Edit", edit_neighbourhood_path(neighbourhood) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Neighbourhood", new_neighbourhood_path %></p>

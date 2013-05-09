@@ -1,0 +1,10 @@
+<% title "New Category" %>
+
+<%= simple_form_for @category do |f| %>
+  <%= f.error_messages %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+
+
+<p><%= link_to "Back to List", categories_path %></p>

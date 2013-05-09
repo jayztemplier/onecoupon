@@ -1,0 +1,44 @@
+<% title "Event" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+<p>
+  <strong>Company:</strong>
+  <%= @event.company.try(:name) %>
+</p>
+<p>
+  <strong>Discount Summary:</strong>
+  <%= @event.discount_summary %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+<p>
+  <strong>Start Date:</strong>
+  <%= @event.start_date %>
+</p>
+<p>
+  <strong>End Date:</strong>
+  <%= @event.end_date %>
+</p>
+<p>
+  <strong>Total Number:</strong>
+  <%= @event.total_number %>
+</p>
+<p>
+  <strong>Bought Number:</strong>
+  <%= @event.bought_number %>
+</p>
+<p>
+  <strong>Validated:</strong>
+  <%= @event.validated %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_event_path(@event) %> |
+  <%= link_to "Destroy", @event, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", events_path %>
+</p>
