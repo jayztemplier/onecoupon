@@ -1,13 +1,11 @@
 OpenCoupon::Application.routes.draw do
-  resources :events
-
-  resources :categories
-
-  resources :companies
-
-  resources :neighbourhoods
-
-  resources :cities
-
+	
   root :to => "companies#index"
+  devise_for :companies, :sign_out_via => [ :get ]
+  resources :companies, except: :show
+
+  resources :events
+  resources :categories
+  resources :neighbourhoods
+  resources :cities
 end
