@@ -23,7 +23,11 @@
       <td><%= event.total_number %></td>
       <td><%= event.bought_number %></td>
       <td><%= event.validated %></td>
-      <td><%= link_to "Show", event %></td>
+      <td><%= link_to "Show", company_event_path(current_company, event) %></td>
+      <td><%= link_to "Edit", edit_company_event_path(current_company, event) %></td>
+      <td><%= link_to "Destroy", company_event_path(current_company, event), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
+
+<p><%= link_to "New Event", new_company_event_path(current_company) %></p>

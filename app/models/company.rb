@@ -10,7 +10,8 @@ class Company < ActiveRecord::Base
   belongs_to :city
   belongs_to :neighbourhood
   belongs_to :category
-  
+  has_many :events
+    
   attr_accessible :name, :email, :phone_number, :address, :city, :city_id, :neighbourhood, :neighbourhood_id, :category, :category_id
 
   validates :name, presence: true, uniqueness: true

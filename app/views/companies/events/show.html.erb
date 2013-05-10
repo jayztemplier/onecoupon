@@ -38,5 +38,7 @@
 </p>
 
 <p>
-  <%= link_to "View All", events_path %>
+  <%= link_to "Edit", edit_company_event_path(@event.company, @event) %> |
+  <%= link_to "Destroy", company_event_path(@event.company, @event), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", company_events_path(current_company) %>
 </p>
